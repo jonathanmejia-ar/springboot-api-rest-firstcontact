@@ -11,8 +11,13 @@ public class UserModel {
     @Column(unique = true, nullable = false)
     private Long id;
 
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "email")
     private String email;
+
+    @Column(name = "priority")
     private Integer priority;
 
     public void setPriority(Integer priority) {
