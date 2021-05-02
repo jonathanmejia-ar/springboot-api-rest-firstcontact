@@ -1,41 +1,50 @@
 package com.example.demo.models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "user")
 public class UserModel {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(unique = true, nullable = false)
     private Long id;
+
     private String name;
     private String email;
     private Integer priority;
 
-    public void setPriority(Integer priority){
+    public void setPriority(Integer priority) {
         this.priority = priority;
     }
 
-    public Integer getPriority(){
+    public Integer getPriority() {
         return this.priority;
     }
 
-    public Long getId(){
+    public Long getId() {
         return this.id;
     }
 
-    public void setId(Long id){
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getName(){
+    public String getName() {
         return this.name;
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
 
-    public String getEmail(){
+    public String getEmail() {
         return this.email;
     }
 
-    public void setEmail(String email){
+    public void setEmail(String email) {
         this.email = email;
     }
 
-}
+};
